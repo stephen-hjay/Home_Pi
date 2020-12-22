@@ -135,7 +135,7 @@
 		<nav class="navbar navbar-expand-lg navbar-light bg-light">
 			<div class="container-fluid">
 				<a class="navbar-brand" href="index.html">
-					<img id ="logo" src="images/cornell%20logo.png" alt="" />
+					<img id ="logo" src="images/cornell-reduced-white.svg" alt="" />
 				</a>
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbars-host" aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="icon-bar"></span>
@@ -162,8 +162,8 @@
 						</li>
 						<li class="nav-item"><a class="nav-link" href="#Testing">Testing & Issues</a></li>
 						<li class="nav-item"><a class="nav-link" href="#Result">Results</a></li>
-						<li class="nav-item"><a class="nav-link" href="#">Future Work</a></li>
-						<li class="nav-item"><a class="nav-link" href="#">Reference</a></li>
+						<li class="nav-item"><a class="nav-link" href="#conclusion">Future Work</a></li>
+						<li class="nav-item"><a class="nav-link" href="#ref">Reference</a></li>
 					</ul>
 <!--					<ul class="nav navbar-nav navbar-right">-->
 <!--                        <li><a class="hover-btn-new log orange" href="#" data-toggle="modal" data-target="#login"><span>Book Now</span></a></li>-->
@@ -222,6 +222,27 @@
 					</div>
 				</div><!-- end section -->
 			</div>
+			<div class="carousel-item">
+				<div id="home" class="first-section" style="background-image:url('images/wholeset2.jpeg');">
+					<div class="dtab">
+						<div class="container">
+							<div class="row">
+								<div class="col-md-12 col-sm-12 text-right">
+									<div class="big-tagline">
+										<h2><strong>Home Pi</strong> Security System</h2>
+										<p class="lead"> ECE 5725 Final Project - by Jie He (jh2735) and Yuchong Geng (yg534).</br>
+											December 19, 2020.
+										</p>
+										<!--											<a href="#" class="hover-btn-new"><span>Contact Us</span></a>-->
+										&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+										<a href="#objective" class="hover-btn-new"><span>Read More</span></a>
+									</div>
+								</div>
+							</div><!-- end row -->
+						</div><!-- end container -->
+					</div>
+				</div><!-- end section -->
+			</div>
 
 			<a class="new-effect carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
 				<span class="fa fa-angle-left" aria-hidden="true"></span>
@@ -247,7 +268,7 @@
 					</br>
 					<P class="lead">This system should be powerful enough so that Jie and Yuchong could watch the real time CCTV stream video and audio of their front doors from anywhere. Also, the system should be smart enough to automatically recognize their faces and open the doors while deny the faces of intruders. Even more, this system should enable remote control so that even if Yuchong forgets bringing the key, Jie still could open the door remotely while sitting at Phillips hall.
 					</P>
-					<img src="images/projectPhoto.png"alt="" class="img-fluid img-rounded">
+					<img src="images/wholeset.png" alt="" class="img-fluid img-rounded">
 					<P class="lead">Home Pi, our project, is a security system desgined for protecting the front doors of our home. This system streams live video and audio CCTV based on Picamera and Microphone to a webserver, which an android phone could access to. This system provides fast face recognition and real-time semantic segmentation based on Tensorflow and OpenCV powered by Coral TPU. An Android application should be able to access the system remotely.
 					</P>
 
@@ -265,7 +286,7 @@
 			<div class="hmv-box">
 				<div class="container">
 
-					<center><img src="images/wholeset.png" alt="" class="img-fluid img-rounded"></center>
+					<center></center>
 					<center>
 						</br>
 						</br>
@@ -388,7 +409,7 @@
 							</br>
 							After the Icecast2 installation, we made a Config file for DarkIce by creating a file named <code>darkice.cfg</code>. The content configurations file should be like xxx and we also need to make shell script named <code>darkice.sh</code> so we could start the audio stream service by executing it. After entering <code>sudo service icecast2 start</code>, we could launch the audio stream server by executing the shell script <code>sudo /home/pi/darkice.sh</code>. And we set We set the live audio feed to a website served by the RPi, and the audio could be accessed by visiting the url <code>http:// IP_Address_Of_Pi:8000/rapi.mp3</code> on browser.
 						</p>.
-						<a href="#" class="hover-btn-new orange"><span>Github Repo</span></a>
+						<a href="https://github.com/stephen-hjay/Home_Pi/blob/main/final_project_RPi/CCTVServer.py" class="hover-btn-new orange"><span>Github Repo</span></a>
 					</div><!-- end messagebox -->
 
 				</div><!-- end col -->
@@ -476,7 +497,9 @@
 							<p>And to illustrate our model’s performance, we have also plotted the confusion matrix for test images.
 								As shown in this confusion matrix, the model can clearly differentiate between Yuchong, Jay and negative.
 							</p>
+							<a href="https://github.com/stephen-hjay/Home_Pi/blob/main/final_project_RPi/video_stream.py" class="hover-btn-new orange"><span>Github Repo</span></a>
 						</div><!-- end messagebox -->
+
 					</div><!-- end col -->
 
 					<div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
@@ -662,7 +685,7 @@
 							<p>To achieve our goal of live video and audio streaming, face recognition, semantic segementation and flask stream, we must decrease the latency and running time of every part as fast as possible. At the beginning, we tried to launch every thing in one bash file. This delay time and the latency is too long. To reduce the latency, one solution is to parallel process different tasks to take advantage of four cores in R-Pi.
 								In python, we could use the multiprocessing library to fully take advantage of four cores of R-Pi. In total, we have five process assigned to four cores.
 							</p>
-							<a href="#" class="hover-btn-new orange"><span>Learn More</span></a>
+							<a href="#main interface" class="hover-btn-new orange"><span>Learn More</span></a>
 						</div><!-- end messagebox -->
 					</div><!-- end col -->
 
@@ -738,8 +761,6 @@
 						</li>
 
 					</ol>
-
-
 
 				</div>
 				<div class="post-media1 wow fadeIn">
@@ -1020,7 +1041,7 @@
 			<div class="container">
 				<div class="row align-items-center">
 					<div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
-						<div class="message-box">
+						<div id="conclusion" class="message-box">
 							<!--							<h4>2020 BEST SmartEDU education school</h4>-->
 							<h2>Result & Conclusion</h2>
 							<p>
@@ -1030,6 +1051,7 @@
 								After implementing this system and spending many times on debugging errors we have made, we have grabbed a lot of knowledge about embedded systems that cannot be learned just by studying textbooks.
 								And we want to use this opportunity to thank our amazing instructor Joseph Skovira and dedicated TAs for their generous support, detailed guidance and great passion into this course.
 							</p>
+							<a href="https://github.com/stephen-hjay/Home_Pi" class="hover-btn-new orange"><span>Github Repo</span></a>
 
 							<h2>Future Work</h2>
 
@@ -1079,7 +1101,7 @@
 					<div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
 						<div class="message-box">
 							<!--							<h4>2020 BEST SmartEDU education school</h4>-->
-							<h2>References</h2>
+							<h2 id = "ref">References</h2>
 							<ul>
 								<li><a href="https://picamera.readthedocs.io/en/release-1.13/">PiCamera Documentation</a></li>
 								<li><a href="https://sourceforge.net/p/raspberry-gpio-python/wiki/Home/">RPi GPIO Library</a></li>
@@ -1088,6 +1110,7 @@
 								<li><a href="https://maker.pro/raspberry-pi/projects/how-to-build-an-internet-radio-station-with-raspberry-pi-darkice-and-icecast">Radio Station based on Pi</a> </li>
 								<li><a href="https://media.digikey.com/pdf/data%20sheets/adafruit%20pdfs/154_web.pdf">Servo Datasheet</a></li>
 								<li><a href="https://www.tensorflow.org/lite">Tensorflow Lite Official Documentation</a></li>
+								<li><a href="https://coral.ai/docs/">Coral TPU Documentation</a></li>
 
 							</ul>
 						</div><!-- end messagebox -->
@@ -1110,7 +1133,7 @@
 
 
 
-			<h2>main system</h2>
+			<h2 id = "main interface">main system</h2>
 			<p>
 				<meta charset="utf-8"><code style='box-sizing: border-box; font-family: Menlo, Monaco, Consolas, "Courier New", monospace; font-size: inherit; padding: 0px; color: inherit; background-color: transparent; border-radius: 0px; white-space: pre-wrap;'>&nbsp;</code></p>
 			<style type="text/css">
