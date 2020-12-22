@@ -1,0 +1,4 @@
+#!/bin/bash
+
+sudo bash /home/pi/darkice.sh & 
+python3 ./CCTVServer.py &
